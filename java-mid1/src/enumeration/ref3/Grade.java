@@ -1,7 +1,7 @@
-package enumeration.ref2;
+package enumeration.ref3;
 
 public enum Grade {
-    BASIC(10), GOLD(20), DIAMOND(30);
+    BASIC(10), GOLD(20), DIAMOND(30), VIP(40);
     private final int discountPercentage;
 
     Grade(int discountPercentage) {
@@ -12,4 +12,8 @@ public enum Grade {
         return discountPercentage;
     }
 
+    //추가
+    public int discount(int price){
+    return price * discountPercentage / 100;
+    }
 }
